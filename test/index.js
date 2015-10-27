@@ -31,7 +31,7 @@ describe('hapi-raven', function () {
       }
     });
   });
-
+  
   function register (options) {
     server.register({
       register: require('../'),
@@ -67,7 +67,7 @@ describe('hapi-raven', function () {
         method: 'get',
         path: '/',
         query: {},
-        remoteAddress: '',
+        remoteAddress: '127.0.0.1',
         userAgent: 'shot'
       }));
       raven.Client.restore();
